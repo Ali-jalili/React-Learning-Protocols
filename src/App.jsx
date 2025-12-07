@@ -4,6 +4,7 @@ import { useState } from "react";
 import CounterDemo from "./components/01-counter/Counter.demo.jsx";
 // import TodoDemo from "./components/02-todo-list/Todo.demo.jsx"; // بعداً می‌سازیم
 import "./App.css";
+import WelcomeMessageDemo from "./components/02-WelcomeMessage/WelcomeMessage.demo.jsx";
 
 function App() {
   const [currentPractice, setCurrentPractice] = useState("counter");
@@ -19,14 +20,14 @@ function App() {
         >
           تمرین ۱: Counter
         </button>
-        <button onClick={() => setCurrentPractice("todo")}>
-          تمرین ۲: Todo List
+        <button onClick={() => setCurrentPractice("WelcomeMessage")}>
+          تمرین ۲: WelcomeMessage
         </button>
         {/* بعداً دکمه‌های بیشتر */}
       </div>
 
       {currentPractice === "counter" && <CounterDemo />}
-      {currentPractice === "todo" && <TodoDemo />}
+      {currentPractice === "WelcomeMessage" && <WelcomeMessageDemo />}
     </div>
   );
 }
