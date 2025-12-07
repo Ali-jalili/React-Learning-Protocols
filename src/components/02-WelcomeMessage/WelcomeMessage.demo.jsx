@@ -7,7 +7,7 @@ function WelcomeMessageDemo() {
     <div style={{ padding: "20px", border: "1px solid #ccc", margin: "10px" }}>
       <WelcomeMessage name={"Ali"} />
     <p style={{ fontSize: "0.9rem", color: "#666" }}>
-        تمرین شماره 2 — هفته اول
+        تمرین شماره 1 — هفته اول
       </p>
     </div>
   );

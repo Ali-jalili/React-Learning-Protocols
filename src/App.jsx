@@ -14,20 +14,20 @@ function App() {
       <h1>🧠 نمایشگاه تمرین‌های React</h1>
 
       <div style={{ marginBottom: "20px" }}>
+        <button onClick={() => setCurrentPractice("WelcomeMessage")}>
+          تمرین 1: WelcomeMessage
+        </button>
         <button
           onClick={() => setCurrentPractice("counter")}
           style={{ marginRight: "10px" }}
         >
-          تمرین ۱: Counter
-        </button>
-        <button onClick={() => setCurrentPractice("WelcomeMessage")}>
-          تمرین ۲: WelcomeMessage
+          تمرین 2: Counter
         </button>
         {/* بعداً دکمه‌های بیشتر */}
       </div>
 
-      {currentPractice === "counter" && <CounterDemo />}
       {currentPractice === "WelcomeMessage" && <WelcomeMessageDemo />}
+      {currentPractice === "counter" && <CounterDemo />}
     </div>
   );
 }

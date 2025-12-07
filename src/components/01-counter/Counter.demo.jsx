@@ -8,7 +8,7 @@ export default function CounterDemo() {
       <h3>۱. کامپوننت شمارنده (Counter)</h3>
       <Counter />
       <p style={{ fontSize: "0.9rem", color: "#666" }}>
-        تمرین شماره ۱ — هفته اول
+        تمرین شماره 2 — هفته اول
       </p>
     </div>
   );
