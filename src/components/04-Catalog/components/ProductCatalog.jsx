@@ -12,26 +12,29 @@ function ProductCatalog() {
 
   const [filterText, setFilterText] = useState("");
 
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("all");
 
   function handleFilterChange(value) {
-    setFilterText(value.trim());
+    setFilterText(value);
   }
 
-  const filteredByText = products.filter((item) =>
-    item.name.toLowerCase().includes(filterText)
-  );
+  // const filteredByText = products.filter((item) =>
+  //   item.name.toLowerCase().includes(filterText)
+  // );
 
   function handleCategoryChange(category) {
     setCategory(category);
-
-    console.log(category);
   }
-
 
   const filteredProducts = products.filter((item) => {
-  
-  }
+    const isTextMatch = item.name
+      .toLowerCase()
+      .includes(filterText.toLowerCase().trim());
+
+    const isCategoryMatch = category === "all" || item.category === category;
+
+    return isTextMatch && isCategoryMatch;
+  });
 
   return (
     <div style={{ padding: "20px", border: "1px solid #ccc", margin: "10px" }}>
@@ -41,7 +44,7 @@ function ProductCatalog() {
         onCategorySelect={handleCategoryChange}
       />
 
-      <ProductList initialProducts={filteredByText} />
+      <ProductList initialProducts={filteredProducts} />
     </div>
   );
 }

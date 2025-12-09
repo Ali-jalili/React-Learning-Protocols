@@ -15,15 +15,15 @@ function FilterBar({ filterText, onHandelFilterChange, onCategorySelect }) {
         <option value="price">Sort by price</option>
       </select>
 
-      <Button onClick={() => onCategorySelect("All Categories")}>
-        All Categories
+      <Button onClick={() => onCategorySelect("all")}>All Categories</Button>
+      <Button onClick={() => onCategorySelect("کتاب")}>کتاب</Button>
+      <Button onClick={() => onCategorySelect("الکترونیک")}>الکترونیک</Button>
+      <Button onClick={() => onCategorySelect("خانه و آشپزخانه")}>
+        خانه و آشپزخانه
       </Button>
-      <Button onClick={() => onCategorySelect("Electronics")}>
-        Electronics
+      <Button onClick={() => onCategorySelect("لوازم جانبی")}>
+        لوازم جانبی
       </Button>
-      <Button>Books</Button>
-      <Button>Home & Kitchen</Button>
-      <Button>Accessories</Button>
     </div>
   );
 }
