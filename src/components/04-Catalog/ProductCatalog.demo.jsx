@@ -1,10 +1,11 @@
 /** @format */
 
+import ProductCatalog from "./components/ProductCatalog";
 
 function ProductCatalogDemo() {
   return (
     <div>
-      <h1>ProductCatalogDemo</h1>
+      <ProductCatalog />
     </div>
   );
 }
