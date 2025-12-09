@@ -1,6 +1,7 @@
 /** @format */
 import React from "react";
 import { Center, List } from "rsuite";
+import ProductCard from "./ProductCard";
 
 function ProductList({ initialProducts }) {
   return (
@@ -9,20 +10,16 @@ function ProductList({ initialProducts }) {
         <List bordered hover>
           {initialProducts.map((item) => (
             <List.Item key={item.id} index={item.id}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>{item.name}</div>
-                <div style={{ fontWeight: 700 }}>{item.price} تومان</div>
-              </div>
+              <ProductCard product={item} />
             </List.Item>
           ))}
         </List>
       </div>
+      <select name="" id="">
+        <option value="">بدون مرتب سازی</option>
+        <option value="name">مرتب سازی بر اساس نام</option>
+        <option value="price">مرتب سازی بر اساس قیمت</option>
+      </select>
     </Center>
   );
 }
