@@ -1,6 +1,6 @@
 /** @format */
 
-import GroceryList from "./GroceryList";
+import GroceryList from "./components/GroceryList";
 
 function GroceryListDemo() {
   return (
