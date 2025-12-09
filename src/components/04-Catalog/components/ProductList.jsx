@@ -15,11 +15,6 @@ function ProductList({ initialProducts }) {
           ))}
         </List>
       </div>
-      <select name="" id="">
-        <option value="">بدون مرتب سازی</option>
-        <option value="name">مرتب سازی بر اساس نام</option>
-        <option value="price">مرتب سازی بر اساس قیمت</option>
-      </select>
     </Center>
   );
 }
